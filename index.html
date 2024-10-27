@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Player Cart</title>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.13/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body>
+    <div id="budget-container" class="lg:flex justify-around p-5 text-2xl font-bold bg-gray-500">
+        <h2>Budget: <span id="budget" class="text-white">2500</span>$</h2>
+        <h2>Cart: <span id="cart" class="text-white">0</span></h2>
+        <h2>Left: <span id="left" class="text-white">6</span></h2>
+    </div>
+    <div id="main-container" class="lg:flex justify-around mt-10">
+        <div id="players-container" class="grid grid-cols-2 gap-5">
+            <div class=" shadow-lg text-center pt-4 pb-4">
+                <h5>Tamim Iqbal</h5>
+                <h5>Price: <span>500</span>$</h5>
+                <h5>Category: <span>Bat</span></h5>
+                <button class="bg-gray-200 p-1 rounded-sm add-btn">Add to cart</button>
+            </div>
+            <div class=" shadow-lg text-center pt-4 pb-4">
+                <h5>Shakib Ul Hasan</h5>
+                <h5>Price: <span>300</span>$</h5>
+                <h5>Category: <span>Bat</span></h5>
+                <button class="bg-gray-200 p-1 rounded-sm add-btn">Add to cart</button>
+            </div>
+            <div class=" shadow-lg text-center pt-4 pb-4">
+                <h5>Musfiq</h5>
+                <h5>Price: <span>200</span>$</h5>
+                <h5>Category: <span>Bat</span></h5>
+                <button class="bg-gray-200 p-1 rounded-sm add-btn">Add to cart</button>
+            </div>
+            <div class="shadow-lg text-center pt-4 pb-4">
+                <h5>Liton Das</h5>
+                <h5>Price: <span>300</span>$</h5>
+                <h5>Category: <span>Bat</span></h5>
+                <button class="bg-gray-200 p-1 rounded-sm add-btn">Add to cart</button>
+            </div>
+            <div class="shadow-lg text-center pt-4 pb-4">
+                <h5>Shantho</h5>
+                <h5>Price: <span>200</span>$</h5>
+                <h5>Category: <span>Ball</span></h5>
+                <button class="bg-gray-200 p-1 rounded-sm add-btn">Add to cart</button>
+            </div>
+            <div class="shadow-lg text-center pt-4 pb-4">
+                <h5>Mustafiz</h5>
+                <h5>Price: <span>300</span>$</h5>
+                <h5>Category: <span>Ball</span></h5>
+                <button class="bg-gray-200 p-1 rounded-sm add-btn">Add to cart</button>
+            </div>
+            <div class="shadow-lg text-center pt-4 pb-4">
+                <h5>Taskin</h5>
+                <h5>Price: <span>100</span>$</h5>
+                <h5>Category: <span>Ball</span></h5>
+                <button class="bg-gray-200 p-1 rounded-sm add-btn">Add to cart</button>
+            </div>
+            <div class="shadow-lg text-center pt-4 pb-4">
+                <h5>Mehedi Hasan Miraz</h5>
+                <h5>Price: <span>400</span>$</h5>
+                <h5>Category: <span>Ball</span></h5>
+                <button class="bg-gray-200 p-1 rounded-sm add-btn">Add to cart</button>
+            </div>
+
+        </div>
+        <div id="cart-container">
+            <h3 class="text-2xl font-semibold">My Cart</h3>
+            <hr class="mt-2 mb-2">
+            <div id="selected-players" class="flex justify-evenly gap-5">
+                <h5>Name</h5>
+                <h5>Price</h5>
+                <h5>Category</h5>
+            </div>
+            <div id="select-players-container">
+            </div>
+            <hr class="mt-2 mb-2">
+            <h3 class="text-center">Total cost: <span id="total-cost">0</span> $</h3>
+            <hr class="mt-2 mb-2">
+            <div id="coupon-code">
+                <input class="border-2 p-2" type="text" name="" id="code" placeholder="Coupon code">
+                <button onclick="updateGrandTotal('apply-btn')" class="bg-gray-200 p-2 rounded-sm">Apply</button>
+            </div>
+            <hr class="mt-2 mb-2">
+            <h3 class="text-center">Grand Total: <span id="grand-total">0</span> $</h3>
+        </div>
+    </div>
+
+    <script src="/cart.js"></script>
+</body>
+
+</html>
